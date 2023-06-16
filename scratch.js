@@ -21,6 +21,7 @@
                               "opcode": "windowClose",
                               "blockType": "command",
                               "text": "close window",
+                              "isTerminal": true,
                           },
   
                           {
