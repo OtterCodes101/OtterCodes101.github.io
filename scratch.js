@@ -76,6 +76,17 @@
                               "text": "E",
                               "disableMonitor": true
                           },
+                          {
+                              "opcode": "jsExec",
+                              "blockType": "command",
+                              "text": "javascript [name]",
+                              "arguments": {
+                                  "name": {
+                                      "type": "string",
+                                      "defaultValue": "alert('hello!')"
+                                  },
+                            }
+                          },
                                 
         ],
       };
@@ -105,6 +116,10 @@
       }
       returnE() {
         return Math.E;
+      }
+     jsExec({name}) {
+         // i am not responsible for malicious code executed through here
+        eval(name)
       }
   }
   Scratch.extensions.register(new ScratchUtils())
